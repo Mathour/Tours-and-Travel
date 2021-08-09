@@ -1,0 +1,182 @@
+.page-wrap {
+    background: $bg_white;
+    .container {
+        max-width: 1366px;
+        padding-left: 0px;
+        padding-right: 0px;
+        .wp-block-columns {
+            margin-bottom: 0;
+        }
+        .fp-intro {
+            padding: 3rem 3rem 2rem 3rem;
+            background: $bg_white;
+        }
+        .fp-destinations {
+            padding: 2rem 1rem 2rem 1rem;
+            .blocks-gallery-item__caption {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                max-height: 100%;
+                overflow: auto;
+                padding: 1em 1em 1em;
+                color: #fff;
+                text-align: center;
+                font-size: 1em;
+                background: $bg_page_title;
+            }
+        }
+        .fp-best-tours {
+            padding: 2rem 1rem 2rem 1rem;
+            background: $bg_white;
+            .card-body {
+                background: $bg_off_white;
+                .card-title {
+                    margin-bottom: 0.5rem;
+                    border: orange solid 2px;
+                    padding: 0.5rem;
+                }
+            }
+        }
+        .fp-blogs {
+            padding: 2rem 1rem 2rem 1rem;
+            .card-body {
+                background: $bg_white;
+                a {
+                    text-decoration: none;
+                    color: $secondary;
+                    .card-title {
+                        margin-bottom: 0.5rem;
+                        border: orange solid 2px;
+                        padding: 0.5rem;
+                    }
+                }
+            }
+            .card-img,
+            .card-img-top {
+                max-height: 360px;
+            }
+        }
+        .bg-offwhite {
+            background: $bg_off_white;
+        }
+        .ap-intro {
+            padding-left: 2rem;
+        }
+        .ap-s2 {
+            padding-right: 1rem;
+        }
+        .category-title {
+            padding: 1rem 0 0 1rem;
+        }
+        .category-name {
+            color: $primary;
+        }
+        hr:not([size]) {
+            height: 3px;
+        }
+        .acf-map {
+            height: 100%;
+        }
+        .cp-heading {
+            margin-top: 1rem;
+            color: $other;
+        }
+        .cp-subheading {
+            color: $primary;
+        }
+        .cp-details {
+            color: $secondary;
+        }
+        .cp-social-icons {
+            display: flex;
+            ul {
+                list-style: none;
+                display: contents;
+                li {
+                    margin-right: 5px;
+                    font-size: 2rem;
+                    a {
+                        color: $primary;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.banner {
+    margin-top: -100px;
+    .banner-img {
+        position: relative;
+        text-align: center;
+        z-index: -1;
+        img {
+            width: 1920px;
+            max-height: 768px;
+            object-fit: cover;
+        }
+        .page-title {
+            position: absolute;
+            background: $bg_page_title;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            padding-bottom: 1rem;
+            .page_subtitle {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.tour-search-bar {
+    padding: 1rem;
+    background: $secondary;
+    color: white;
+    .btn-wide {
+        width: -webkit-fill-available;
+    }
+}
+
+.card-body {
+    a {
+        text-decoration: none;
+        color: $secondary;
+        h5 {
+            padding: 0.5rem 0 0.5rem 0;
+            border: $primary solid 2px;
+            text-align: center;
+            min-height: 4rem;
+        }
+    }
+    hr {
+        margin: 0;
+    }
+}
+
+.form-title {
+    padding: 1rem 0 0 1rem;
+    color: $primary;
+}
+
+.form-box {
+    border: gray solid 3px;
+    padding: 1rem;
+    margin: 1rem;
+    .personal-details {
+        color: $primary;
+        text-transform: uppercase;
+    }
+    input,
+    textarea {
+        border: $primary solid 2px;
+        border-radius: 4px;
+    }
+    .select2-container,
+    .select2-selection {
+        border: $primary solid 2px;
+        border-radius: 4px;
+    }
+}

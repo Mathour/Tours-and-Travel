@@ -1,0 +1,180 @@
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Header Styling*-------------------------------------------------------------*/
+header{
+	width: 100%;
+}
+
+header .topbar{
+	background-color: #479929;
+}
+
+header .topbar .top-bar-socials{
+	display: flex;
+}
+
+header .topbar .top-bar-search{
+	float: right;
+}
+
+header .logobar{
+	display: block;
+	text-align: center;
+	background: #ffffff7a;	
+}
+
+header .logobar .logo{
+	margin: 0 auto !important;               
+}
+
+header .logobar .logo img{
+	max-width: 150px;               
+}
+
+header .navbar{
+	display: block;
+	background-color: #47992975;              
+}
+
+header .navbar .logo img{
+	max-width: 150px;
+}
+
+header .navbar .nav-menu{
+	float: left;
+}
+
+header .navbar .main-menu{
+	display: flex;
+	margin-left: 5px;
+	list-style-type: none;	
+}
+
+/*to show the sub-menu under its parent menu item*/
+header .navbar .main-menu li {
+	position: relative;
+}
+
+header .navbar .main-menu li a{
+	padding: 5px;
+	color: #ffffff !important;
+	background-color: inherit;
+}
+
+header .navbar .main-menu li a:hover{
+	background-color: #ffb400 !important;
+}
+
+/*To show the current active menu item different*/
+.current-menu-item > a,
+.current_page_item > a {
+    color:  #ffb400;
+}
+
+header .navbar .main-menu li:first-child a{
+	padding-left:0;
+}
+
+header .navbar .main-menu li:last-child a{
+	padding-right:0;
+}
+
+header .navbar .main-menu li .sub-menu{
+	display: none; /*we don't want to show the sub-menu whithout the curser been taken over the link*/
+	position: absolute;
+	top: 100%;
+	left: 0;
+	background: #fff;
+	box-shadow: 1px 1px 10px rgba(0,0,0,0.1);
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	width:200px;
+	z-index: 999;
+}
+
+/*to show the sub-menu when the cursor is over the list item that has the sub-menu*/
+header .navbar .main-menu > .menu-item-has-children:hover > .sub-menu
+{
+	display:block;
+}
+
+/*styling the items of the first child menu*/
+header .navbar .main-menu li .sub-menu a{
+	color:#000;
+	padding:5px;
+	text-decoration:none;
+	display:block;
+}
+
+/*to change the color of the sub-menu item when the cursor is over it*/
+header .navbar .main-menu li .sub-menu a:hover{
+	color:blue;
+}
+
+header .navbar .main-menu li .sub-menu a.active{
+	color:red;
+}
+
+header .navbar .main-menu .sub-menu li .sub-menu{
+	display: none;	
+	left: 100%;
+	top: 0;	
+}
+
+header .navbar .main-menu .sub-menu li:hover .sub-menu{
+	display: block;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Page Body Styling----------------------------------------------------------*/
+.banner{
+	margin-bottom: 35% !important;
+}
+
+.banner-img{
+	text-align: center;
+}
+
+.banner-img img{
+	width: 100%;
+    max-height: 800px;
+    position: absolute;
+    top: 34px;
+    left: 0;
+	z-index: -1;
+}
+
+.page-wrap{
+	padding: 10px;
+}
+
+.content-section{
+	position: relative;
+	overflow: auto;
+}
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Widget Styling----------------------------------------------------------*/
+.widget{
+	list-style-type: none;
+	padding: 5px;
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Footer Styling-----------------------------------------------------------*/
+footer{
+	background: #353232;
+}
+
+.footer-menu{
+	padding: 5px;
+	list-style-type: none;	
+}
+
+#footer{
+	position: relative;
+    bottom: 0px;
+    display: block;
+    width: -webkit-fill-available;
+    padding: 10px;
+}
+

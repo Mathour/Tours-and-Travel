@@ -1,0 +1,60 @@
+header {
+    background: $bg_header;
+    height: 100px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    .row {
+        align-items: center;
+        height: 100%;
+    }
+    .logo {
+        height: 100px;
+        img,
+        svg {
+            height: -webkit-fill-available;
+        }
+    }
+    .menu-primary-menu-container {
+        text-align: center;
+    }
+    .nav-menu {
+        list-style-type: none;
+        display: -webkit-inline-box;
+        ul {
+            display: inline-flex;
+        }
+        li {
+            a {
+                text-decoration: none;
+                padding: 5px 5px;
+                color: $secondary;
+                &:active,
+                &:hover {
+                    color: $primary;
+                }
+            }
+        }
+    }
+    .top-bar-socials {
+        color: $other;
+        padding: 0px 5px 15px 0px;
+        text-align: right;
+    }
+    .widget_text,
+    .widget,
+    .widget_custom_html {
+        list-style: none;
+        .social-wrap {
+            list-style: none;
+            display: inline-flex;
+            li {
+                padding-left: 5px;
+                a {
+                    color: $other;
+                }
+            }
+        }
+    }
+}

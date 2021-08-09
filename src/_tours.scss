@@ -1,0 +1,126 @@
+.tour-banner {
+    margin-top: -100px;
+    .banner-img {
+        position: relative;
+        text-align: center;
+        z-index: -1;
+        .img-fluid {
+            width: -webkit-fill-available;
+            height: 600px;
+            object-fit: cover;
+        }
+        .page-title {
+            position: absolute;
+            background: $bg_page_title;
+            text-align: center;
+            bottom: 0;
+            width: 100%;
+            color: white;
+            .page_subtitle {
+                color: $primary;
+            }
+        }
+    }
+}
+
+.tour-wrap {
+    padding: 1rem;
+}
+
+.tax-row {
+    background: $bg_off_white;
+    align-items: baseline;
+    .tour-taxonomies {
+        text-align: center;
+        padding-top: 1em;
+        padding-bottom: 1rem;
+        width: 100%;
+        justify-content: center;
+        .tour-tax-ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        p {
+            justify-content: baseline;
+        }
+        h5 {
+            margin-bottom: 0.5em;
+            color: $other;
+        }
+        i {
+            color: $primary;
+            font-size: 2em;
+        }
+    }
+    .border-right {
+        border-right: $secondary solid 2px;
+        width: inherit;
+    }
+}
+
+.details-row {
+    margin-top: 10px;
+    min-height: 320px;
+    .tabs-col {
+        background: $secondary;
+        padding: 1rem;
+        min-height: inherit;
+    }
+    .tab-content-col {
+        background: $bg_off_white;
+        min-height: inherit;
+        padding: 1rem;
+        #tour-gallery {
+            ul {
+                list-style: none;
+                display: flex;
+                li{
+                    margin: 1rem;
+                }
+            }
+        }
+    }
+    .tab-titles {
+        padding-left: 0px;
+        button {
+            color: white;
+            text-decoration: none;
+            background: none;
+            border: $primary solid 2px;
+            border-radius: 4px;
+        }
+    }
+    .pdr {
+        padding-right: 2px;
+    }
+    .pdl {
+        padding-left: 2px;
+    }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show > .nav-link {
+    background: $primary;
+}
+
+.side-bar {
+    background: $bg_off_white;
+    .widget,
+    .widget_search {
+        list-style: none;
+    }
+}
+
+.tour-inquiry{
+    padding: 1rem;
+    background: $bg_off_white;
+    h5{
+        text-align: center;
+        color: $primary;
+    }
+}
+
+.card-icon{
+    height: 25px;
+    width: 25px;
+}
