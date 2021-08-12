@@ -1,60 +1,75 @@
 header {
+    display: flex;
     background: $bg_header;
-    height: 100px;
-    width: 100%;
     position: sticky;
     top: 0;
     z-index: 999;
-    .row {
-        align-items: center;
-        height: 100%;
-    }
-    .logo {
-        height: 100px;
-        img,
-        svg {
-            height: -webkit-fill-available;
-        }
-    }
-    .menu-primary-menu-container {
-        text-align: center;
-    }
-    .nav-menu {
-        list-style-type: none;
-        display: -webkit-inline-box;
-        ul {
-            display: inline-flex;
-        }
-        li {
-            a {
-                text-decoration: none;
-                padding: 5px 5px;
-                color: $secondary;
-                &:active,
-                &:hover {
-                    color: $primary;
-                }
+    article {
+        order: 1;
+        .logo {
+            padding: 0px 1rem 0 1rem;
+            img,
+            svg {
+                max-width: 12rem;
             }
         }
     }
-    .top-bar-socials {
-        color: $other;
-        padding: 0px 5px 15px 0px;
-        text-align: right;
+
+    nav {
+        flex: 1;
+        order: 2;
+        #main-menu {
+            justify-content: center;
+        }
     }
-    .widget_text,
-    .widget,
-    .widget_custom_html {
-        list-style: none;
-        .social-wrap {
+
+    aside {
+        order: 3;
+        align-self: center;
+        justify-content: flex-end;
+        display: flex;
+        padding-right: 1rem;
+        .top-bar-socials {
+            color: $other;
+            padding: 0px 5px 0px 0px;
+        }
+        .widget_text,
+        .widget,
+        .widget_custom_html {
             list-style: none;
-            display: inline-flex;
-            li {
-                padding-left: 5px;
-                a {
-                    color: $other;
+            .social-wrap {
+                list-style: none;
+                display: inline-flex;
+                li {
+                    padding-left: 5px;
+                    a {
+                        color: $other;
+                    }
                 }
             }
         }
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    header > article {
+        flex: 1;
+        order: 2;
+    }
+
+    header > nav {
+        flex: 1;
+        order: 1;
+        .navbar-toggler {
+            margin-left: 1rem;
+        }
+        #menu-button {
+            border-color: $primary;
+        }
+    }
+
+    header > aside {
+        flex: 1;
+        order: 3;
     }
 }

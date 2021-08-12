@@ -10298,69 +10298,84 @@ textarea.form-control-lg {
   }
 }
 header {
+  display: flex;
   background: #ffffffbf;
-  height: 100px;
-  width: 100%;
   position: sticky;
   top: 0;
   z-index: 999;
 }
-header .row {
-  align-items: center;
-  height: 100%;
+header article {
+  order: 1;
 }
-header .logo {
-  height: 100px;
+header article .logo {
+  padding: 0px 1rem 0 1rem;
 }
-header .logo img,
-header .logo svg {
-  height: -webkit-fill-available;
+header article .logo img,
+header article .logo svg {
+  max-width: 12rem;
 }
-header .menu-primary-menu-container {
-  text-align: center;
+header nav {
+  flex: 1;
+  order: 2;
 }
-header .nav-menu {
-  list-style-type: none;
-  display: -webkit-inline-box;
+header nav #main-menu {
+  justify-content: center;
 }
-header .nav-menu ul {
-  display: inline-flex;
+header aside {
+  order: 3;
+  align-self: center;
+  justify-content: flex-end;
+  display: flex;
+  padding-right: 1rem;
 }
-header .nav-menu li a {
-  text-decoration: none;
-  padding: 5px 5px;
-  color: #2d2d2d;
-}
-header .nav-menu li a:active, header .nav-menu li a:hover {
-  color: #ffa200;
-}
-header .top-bar-socials {
+header aside .top-bar-socials {
   color: #e53000;
-  padding: 0px 5px 15px 0px;
-  text-align: right;
+  padding: 0px 5px 0px 0px;
 }
-header .widget_text,
-header .widget,
-header .widget_custom_html {
+header aside .widget_text,
+header aside .widget,
+header aside .widget_custom_html {
   list-style: none;
 }
-header .widget_text .social-wrap,
-header .widget .social-wrap,
-header .widget_custom_html .social-wrap {
+header aside .widget_text .social-wrap,
+header aside .widget .social-wrap,
+header aside .widget_custom_html .social-wrap {
   list-style: none;
   display: inline-flex;
 }
-header .widget_text .social-wrap li,
-header .widget .social-wrap li,
-header .widget_custom_html .social-wrap li {
+header aside .widget_text .social-wrap li,
+header aside .widget .social-wrap li,
+header aside .widget_custom_html .social-wrap li {
   padding-left: 5px;
 }
-header .widget_text .social-wrap li a,
-header .widget .social-wrap li a,
-header .widget_custom_html .social-wrap li a {
+header aside .widget_text .social-wrap li a,
+header aside .widget .social-wrap li a,
+header aside .widget_custom_html .social-wrap li a {
   color: #e53000;
 }
 
+@media only screen and (max-width: 768px) {
+  header > article {
+    flex: 1;
+    order: 2;
+  }
+
+  header > nav {
+    flex: 1;
+    order: 1;
+  }
+  header > nav .navbar-toggler {
+    margin-left: 1rem;
+  }
+  header > nav #menu-button {
+    border-color: #ffa200;
+  }
+
+  header > aside {
+    flex: 1;
+    order: 3;
+  }
+}
 .page-wrap {
   background: #ffffff;
 }
@@ -10469,7 +10484,7 @@ header .widget_custom_html .social-wrap li a {
 }
 
 .banner {
-  margin-top: -100px;
+  margin-top: -8rem;
 }
 .banner .banner-img {
   position: relative;
