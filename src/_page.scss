@@ -180,3 +180,35 @@
         border-radius: 4px;
     }
 }
+
+@media only screen and (min-width: 576px) and (max-width: 768px){
+    .wp-block-gallery{
+        .blocks-gallery-item{
+            width: calc(50% - 1em) !important;
+            margin-right: 1rem !important;
+        }
+    }
+    .learn-more{
+            width: 75% !important;
+        }
+}
+
+@media only screen and (max-width: 575px) {
+    .tour-search-bar {
+        #search-button {
+            margin-top: 1rem;
+        }
+    }
+
+    .wp-block-gallery{
+        display: block;
+        .blocks-gallery-item{
+            width: 100%;
+            margin-right: 0 !important;
+        }
+    }
+
+    .learn-more{
+            width: 100% !important;
+        }
+}

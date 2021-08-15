@@ -124,3 +124,9 @@ import 'bootstrap';
     });
 
 })(jQuery);
+
+(function ($) {
+    $('#menu-button').on("click", function () {
+        $('#social-icons').toggleClass("toggel");
+    });
+})(jQuery);

@@ -3168,6 +3168,12 @@ __webpack_require__.r(__webpack_exports__);
   });
 })(jQuery);
 
+(function ($) {
+  $('#menu-button').on("click", function () {
+    $('#social-icons').toggleClass("toggel");
+  });
+})(jQuery);
+
 /***/ }),
 
 /***/ "./node_modules/bootstrap/dist/js/bootstrap.esm.js":

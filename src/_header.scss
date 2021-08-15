@@ -66,10 +66,17 @@ header {
         #menu-button {
             border-color: $primary;
         }
+        #main-menu{
+            padding-left: 1rem;
+        }
     }
 
     header > aside {
         flex: 1;
         order: 3;
+    }
+
+    header > aside.toggel {
+        align-self: self-start;
     }
 }

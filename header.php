@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Header</title>
+    <title>Hunza Discovery Tours</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR3ou6f5A3xNlD_n0No12wi5XLtbHxNFQ"></script>
 </head>
 
@@ -36,7 +36,7 @@
             ));
             ?>
         </nav>
-        <aside>
+        <aside id="social-icons">
             <div class="top-bar-socials">
                 <?php
                 if (is_active_sidebar('navbar-social-icon')) :

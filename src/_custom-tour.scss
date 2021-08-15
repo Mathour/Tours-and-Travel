@@ -1,0 +1,25 @@
+.hd-ctf-field-25 {
+    width: 25%;
+    display: inline-grid;
+}
+
+.hd-ctf-field-50 {
+    width: 50%;
+    display: inline-grid;
+}
+
+@media only screen and (max-width: 768px) {
+    .hd-ctf-field-25 {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .hd-ctf-field-25 {
+        width: 100%;
+    }
+
+    .hd-ctf-field-50 {
+        width: 100%;
+    }
+}

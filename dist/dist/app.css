@@ -10370,10 +10370,17 @@ header aside .widget_custom_html .social-wrap li a {
   header > nav #menu-button {
     border-color: #ffa200;
   }
+  header > nav #main-menu {
+    padding-left: 1rem;
+  }
 
   header > aside {
     flex: 1;
     order: 3;
+  }
+
+  header > aside.toggel {
+    align-self: self-start;
   }
 }
 .page-wrap {
@@ -10558,6 +10565,57 @@ header aside .widget_custom_html .social-wrap li a {
   border-radius: 4px;
 }
 
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+  .wp-block-gallery .blocks-gallery-item {
+    width: calc(50% - 1em) !important;
+    margin-right: 1rem !important;
+  }
+
+  .learn-more {
+    width: 75% !important;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .tour-search-bar #search-button {
+    margin-top: 1rem;
+  }
+
+  .wp-block-gallery {
+    display: block;
+  }
+  .wp-block-gallery .blocks-gallery-item {
+    width: 100%;
+    margin-right: 0 !important;
+  }
+
+  .learn-more {
+    width: 100% !important;
+  }
+}
+.hd-ctf-field-25 {
+  width: 25%;
+  display: inline-grid;
+}
+
+.hd-ctf-field-50 {
+  width: 50%;
+  display: inline-grid;
+}
+
+@media only screen and (max-width: 768px) {
+  .hd-ctf-field-25 {
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 575px) {
+  .hd-ctf-field-25 {
+    width: 100%;
+  }
+
+  .hd-ctf-field-50 {
+    width: 100%;
+  }
+}
 .tour-banner {
   margin-top: -100px;
 }
@@ -10695,10 +10753,6 @@ footer {
   height: auto;
   width: 100%;
   position: absolute;
-}
-footer .row {
-  align-items: center;
-  height: 100%;
 }
 footer .widget,
 footer .widget_nav_menu {

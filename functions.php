@@ -30,8 +30,6 @@ add_theme_support('search');
 register_nav_menus(
 	array(
 		'primary-menu' => 'Nav Bar Menu',
-		'footer-menu' => 'Footer Menu',
-		'mobile-menu' => 'Mobile Menu Location'
 	)
 );
 
