@@ -8,7 +8,7 @@ get_header();
 ?>
 <div class="banner">
     <div class="banner-img">
-        <img src="<?php echo site_url("/wp-content/themes/Hunza Discovery/images/blogs.jpg", 'http'); ?>" alt="featured" class="img-fluid">
+        <img src="<?php echo site_url("/wp-content/themes/Hunza Discovery/images/blogs.jpg", 'http'); ?>" alt="featured">
         <div class="page-title">
             <h1> Blogs, News & Updates </h1>
         </div>
@@ -19,16 +19,16 @@ get_header();
     <div class="container">
         <div class="row">
             <?php if (is_active_sidebar('blog-sidebar')) { ?>
-                <div class="col-lg-9">
+                <div class="col-sm-12 col-md-9">
                     <?php get_template_part('includes/section', 'archive'); ?>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-sm-12 col-md-3">
                     <div class="blog-side-bar">
                         <?php dynamic_sidebar('blog-sidebar'); ?>
                     </div>
                 </div>
             <?php } else { ?>
-                <div class="col-lg-12">
+                <div class="col-12">
                     <?php get_template_part('includes/section', 'archive'); ?>
                 </div>
             <?php } ?>

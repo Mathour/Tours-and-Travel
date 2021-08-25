@@ -10,7 +10,7 @@ get_header();
 
 <div class="banner">
 	<div class="banner-img">
-		<img src="<?php echo site_url("/wp-content/themes/Hunza Discovery/images/our tours.jpg", 'http'); ?>" alt="featured" class="img-fluid">
+		<img src="<?php echo site_url("/wp-content/themes/Hunza Discovery/images/our tours.jpg", 'http'); ?>" alt="featured">
 		<div class="page-title">
 			<h1> Our Tours </h1>
 		</div>

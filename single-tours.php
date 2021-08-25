@@ -5,10 +5,10 @@ get_header();
 
 <?php //Banner Section 
 ?>
-<div class="tour-banner">
+<div class="banner">
     <div class="banner-img">
         <?php if (has_post_thumbnail()) : ?>
-            <img src="<?php the_post_thumbnail_url(); ?>" alt="featured" class="img-fluid">
+            <img src="<?php the_post_thumbnail_url(); ?>" alt="featured">
         <?php endif; ?>
         <div class="page-title">
             <h1> <?php the_title(); ?> </h1>
@@ -23,16 +23,16 @@ get_header();
     <div class="container">
         <div class="row">
             <?php if (is_active_sidebar('tour-sidebar')) { ?>
-                <div class="col-lg-9">
+                <div class="col-xm-12 col-sm-8 col-md-9">
                     <?php get_template_part('includes/section', 'tourcontent'); ?>
                 </div>
-                <div class="col-lg-3">
+                <div class="col-xm-12 col-sm-4 col-md-3">
                     <div class="side-bar">
                         <?php dynamic_sidebar('tour-sidebar'); ?>
                     </div>
                 </div>
             <?php } else { ?>
-                <div class="col-lg-12">
+                <div class="col">
                     <?php get_template_part('includes/section', 'tourcontent'); ?>
                 </div>
             <?php } ?>
@@ -40,7 +40,8 @@ get_header();
     </div>
 </section>
 
-<?php //Similar tours section ?>
+<?php //Similar tours section 
+?>
 <section class="similar-tours">
     <?php get_template_part('includes/section', 'similartours'); ?>
 </section>

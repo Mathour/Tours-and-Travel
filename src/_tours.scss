@@ -1,28 +1,3 @@
-.tour-banner {
-    margin-top: -100px;
-    .banner-img {
-        position: relative;
-        text-align: center;
-        z-index: -1;
-        .img-fluid {
-            width: -webkit-fill-available;
-            height: 600px;
-            object-fit: cover;
-        }
-        .page-title {
-            position: absolute;
-            background: $bg_page_title;
-            text-align: center;
-            bottom: 0;
-            width: 100%;
-            color: white;
-            .page_subtitle {
-                color: $primary;
-            }
-        }
-    }
-}
-
 .tour-wrap {
     padding: 1rem;
 }

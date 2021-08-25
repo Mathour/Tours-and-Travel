@@ -53,7 +53,7 @@
 </div>
 
 <div class="d-flex details-row">
-    <div class="col-lg-3 tabs-col">
+    <div class="col-xm-12 col-sm-4 col-md-3 tabs-col">
         <div class="nav flex-column nav-pills tab-titles" id="tour-tab" role="tablist" aria-orientation="vertical">
             <?php if (get_field('overview') || get_field('whats_included_in_this_tour') || get_field('whats_not_included_in_this_tour')) : $tab_view = "ov"; ?>
                 <button class="nav-link active mb-1" id="tour-overview-tab" data-bs-toggle="pill" data-bs-target="#tour-overview" type="button" role="tab" aria-controls="tour-overview" aria-selected="true">Overview</button>
@@ -76,7 +76,7 @@
         </div>
     </div>
 
-    <div class="col-lg-9 tab-content-col">
+    <div class="col-xm-12 col-sm-8 col-md-9 tab-content-col">
         <div class="tab-content" id="tour-tabContent">
             <div class="tab-pane fade show active" id="tour-overview" role="tabpanel" aria-labelledby="tour-overview-tab">
                 <div class="row">
@@ -113,17 +113,17 @@
                         $i_title = get_sub_field('title');
                         $i_description = get_sub_field('description'); ?>
                         <div class="row">
-                            <div class="col-lg-3 mb-1 pdr">
+                            <div class="col-xm-12 col-sm-4 col-md-3 mb-1 pdr">
                                 <div class="bg-white">
                                     <h3> <?php echo $i_lable; ?> </h3>
                                 </div>
                             </div>
-                            <div class="col-lg-9 mb-1 pdl">
+                            <div class="col-xm-12 col-sm-8 col-md-9 mb-1 pdl">
                                 <div class="bg-white">
                                     <h3> <?php echo $i_title; ?> </h3>
                                 </div>
                             </div>
-                            <div class="col-lg-12">
+                            <div class="col-12">
                                 <div class="bg-white">
                                     <?php echo $i_description; ?>
                                 </div>
@@ -188,7 +188,7 @@
 <?php //Tour Inquiry form section 
 ?>
 <section class="tour-inquiry mt-2">
-    <h5>INQUIRY ABOUT <?php the_title()?></h5>
+    <h5>INQUIRY ABOUT <?php the_title() ?></h5>
     <hr style="height: 2px; color:$secondary">
     <?php get_template_part('includes/section', 'tourinquiry'); ?>
 </section>

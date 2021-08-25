@@ -10,8 +10,8 @@ get_header();
 
 <div class="banner">
     <div class="banner-img">
-        <?php if (has_post_thumbnail()): ?>
-        <img src="<?php the_post_thumbnail_url('blog-large'); ?>" alt="featured" class="img-fluid">
+        <?php if (has_post_thumbnail()) : ?>
+            <img src="<?php the_post_thumbnail_url('blog-large'); ?>" alt="featured" style="height: auto !important; ">
         <?php endif; ?>
     </div>
 </div>

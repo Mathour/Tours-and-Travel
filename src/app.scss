@@ -37,10 +37,36 @@ body {
 .blog-side-bar {
     padding: 1rem;
     list-style: none;
+    background: $bg_off_white;
+    .widget_block {
+        border-bottom: $secondary solid 2px;
+        margin: 1rem 0 1rem 0;
+    }
+    .wp-block-search__inside-wrapper {
+        padding-bottom: 1rem;
+    }
+    .wp-block-search__input {
+        border: $primary solid 2px;
+        border-radius: 4px;
+    }
+    .wp-block-search__button {
+        background: $primary;
+        border-radius: 4px;
+    }
+    .wp-block-latest-posts__list {
+        li {
+            margin-bottom: inherit;
+            border: $primary solid 2px;
+            a {
+                text-decoration: none;
+                color: $secondary;
+            }
+        }
+    }
 }
 
 .blog-arcive-img {
-    height: 220px;
+    height: 15rem;
     object-fit: cover;
 }
 

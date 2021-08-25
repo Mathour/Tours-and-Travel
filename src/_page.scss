@@ -112,9 +112,10 @@
         text-align: center;
         z-index: -1;
         img {
-            width: 1920px;
-            max-height: 768px;
+            max-width: 100%;
+            height: 40rem;
             object-fit: cover;
+            width: 100%;
         }
         .page-title {
             position: absolute;
@@ -156,6 +157,31 @@
     }
 }
 
+#blog-card {
+    border: none !important;
+    #blog-card-border {
+        border: $primary solid 2px;
+        #blog-card-body {
+            border-left: $primary solid 2px;
+            .card-body{
+                background: $bg_off_white;
+                .title-link{
+                    width: 100%;
+                    h5{
+                        border: $primary solid 2px;
+                        color: $secondary;
+                        text-transform: uppercase;
+                        padding: 1rem;
+                    }
+                    h5:hover{
+                        color: $other;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .form-title {
     padding: 1rem 0 0 1rem;
     color: $primary;
@@ -181,34 +207,51 @@
     }
 }
 
-@media only screen and (min-width: 576px) and (max-width: 768px){
-    .wp-block-gallery{
-        .blocks-gallery-item{
+@media only screen and (min-width: 576px) and (max-width: 768px) {
+    .wp-block-gallery {
+        .blocks-gallery-item {
             width: calc(50% - 1em) !important;
             margin-right: 1rem !important;
         }
     }
-    .learn-more{
-            width: 75% !important;
-        }
+    .learn-more {
+        width: 75% !important;
+    }
 }
 
 @media only screen and (max-width: 575px) {
+    .banner {
+        .banner-img {
+            img {
+                min-height: 20rem;
+            }
+        }
+    }
+
     .tour-search-bar {
         #search-button {
             margin-top: 1rem;
         }
     }
 
-    .wp-block-gallery{
+    .wp-block-gallery {
         display: block;
-        .blocks-gallery-item{
+        .blocks-gallery-item {
             width: 100%;
             margin-right: 0 !important;
         }
     }
 
-    .learn-more{
-            width: 100% !important;
+    .learn-more {
+        width: 100% !important;
+    }
+
+    #blog-card {
+        #blog-card-border {
+            #blog-card-body {
+                border-left: none;
+                border-top: $primary solid 2px;
+            }
         }
+    }
 }
