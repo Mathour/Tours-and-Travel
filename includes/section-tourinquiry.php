@@ -1,6 +1,6 @@
 <form id="inquiry">
     <div class="form-group row">
-        <input type="hidden" name="title" value="<?php echo the_title();?>">
+        <input type="hidden" name="title" value="<?php echo the_title(); ?>">
         <div class="col-lg-6">
             <label for="fname"> First Name </label>
             <input type="text" name="fname" placeholder="First Name" class="form-control" required>
@@ -41,6 +41,7 @@
             var form = $('#inquiry').serialize();
             var formdata = new FormData;
             formdata.append('action', 'inquiry');
+            formdata.append('nonce', '<?php echo wp_create_nonce('ajax-nonce'); ?>');
             formdata.append('inquiry', form);
 
             $.ajax(endpoint, {

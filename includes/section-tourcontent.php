@@ -1,15 +1,19 @@
-<div class="d-flex justify-content-center tax-row">
-    <div class="d-inline-flex tour-taxonomies">
-        <div class="border-right">
-            <i class="bi bi-calendar-plus"></i><br>
-            <h5> No of days </h5>
+<div class="d-flex flex-wrap flex-md-nowrap justify-content-center tax-row">
+    <div class="p-2 flex-fill tour-taxonomies">
+        <div class="border-box">
+            <div class="border-right">
+                <i class="bi bi-calendar-plus"></i><br>
+                <h5> No of days </h5>
+            </div>
             <p> <?php echo get_itinary_count("itinerary"); ?> </p>
         </div>
     </div>
-    <div class="d-inline-flex tour-taxonomies">
-        <div class="border-right">
-            <i class="bi bi-bar-chart"></i><br>
-            <h5> Challenging? </h5>
+    <div class="p-2 flex-fill tour-taxonomies">
+        <div class="border-box">
+            <div class="border-right">
+                <i class="bi bi-bar-chart"></i><br>
+                <h5> Level </h5>
+            </div>
             <ul class="tour-tax-ul">
                 <?php foreach (get_the_terms(get_the_ID(), 'challenging-levels') as $cl) : ?>
                     <li> <?php echo  __($cl->name); ?> </li>
@@ -17,21 +21,30 @@
             </ul>
         </div>
     </div>
-    <div class="d-inline-flex tour-taxonomies">
-        <div class="border-right">
-            <i class="bi bi-map"></i><br>
-            <h5> Destinations </h5>
+    <div class="p-2 flex-fill tour-taxonomies">
+        <div class="border-box">
+            <div class="border-right">
+                <i class="bi bi-map"></i><br>
+                <h5> Destinations </h5>
+            </div>
             <ul class="tour-tax-ul">
-                <?php foreach (get_the_terms(get_the_ID(), 'destinations') as $dest) : ?>
-                    <li> <?php echo  __($dest->name); ?> </li>
-                <?php endforeach; ?>
+                <?php
+                $terms = get_the_terms(get_the_ID(), 'destinations');
+                foreach ($terms as $term) {
+                    if ($term->parent !== 0) { ?>
+                        <li> <?php echo $term->name . ","; ?> </li>
+                <?php
+                    }
+                } ?>
             </ul>
         </div>
     </div>
-    <div class="d-inline-flex tour-taxonomies">
-        <div class="border-right">
-            <i class="bi bi-diagram-2-fill"></i><br>
-            <h5> Category </h5>
+    <div class="p-2 flex-fill tour-taxonomies">
+        <div class="border-box">
+            <div class="border-right">
+                <i class="bi bi-diagram-2-fill"></i><br>
+                <h5> Category </h5>
+            </div>
             <ul class="tour-tax-ul">
                 <?php foreach (get_the_terms(get_the_ID(), 'tour-categories') as $tax) : ?>
                     <li> <?php echo  __($tax->name); ?> </li>
@@ -39,10 +52,12 @@
             </ul>
         </div>
     </div>
-    <div class="d-inline-flex tour-taxonomies">
-        <div class="border-right" style="border-right: none !important;">
-            <i class="bi bi-triangle-half"></i><br>
-            <h5> Activities </h5>
+    <div class="p-2 flex-fill tour-taxonomies">
+        <div class="border-box">
+            <div class="border-right" style="border-right: none !important;">
+                <i class="bi bi-triangle-half"></i><br>
+                <h5> Activities </h5>
+            </div>
             <ul class="tour-tax-ul">
                 <?php foreach (get_the_terms(get_the_ID(), 'activites') as $act) : ?>
                     <li> <?php echo  __($act->name); ?> </li>
@@ -52,9 +67,9 @@
     </div>
 </div>
 
-<div class="d-flex details-row">
-    <div class="col-xm-12 col-sm-4 col-md-3 tabs-col">
-        <div class="nav flex-column nav-pills tab-titles" id="tour-tab" role="tablist" aria-orientation="vertical">
+<div class="row details-row">
+    <div class="col-sm-12 col-md-4 col-lg-3 tabs-col">
+        <div class="nav nav-pills tab-titles" id="tour-tab" role="tablist" aria-orientation="vertical">
             <?php if (get_field('overview') || get_field('whats_included_in_this_tour') || get_field('whats_not_included_in_this_tour')) : $tab_view = "ov"; ?>
                 <button class="nav-link active mb-1" id="tour-overview-tab" data-bs-toggle="pill" data-bs-target="#tour-overview" type="button" role="tab" aria-controls="tour-overview" aria-selected="true">Overview</button>
             <?php endif; ?>
@@ -76,7 +91,7 @@
         </div>
     </div>
 
-    <div class="col-xm-12 col-sm-8 col-md-9 tab-content-col">
+    <div class="col-sm-12 col-md-8 col-lg-9 tab-content-col">
         <div class="tab-content" id="tour-tabContent">
             <div class="tab-pane fade show active" id="tour-overview" role="tabpanel" aria-labelledby="tour-overview-tab">
                 <div class="row">
@@ -87,11 +102,13 @@
                     </div>
                     <div class="col-lg-6 mt-1 pdr">
                         <div class="bg-white" style="min-height: 140px;">
+                            <h3> Tour Includes </h3>
                             <?php the_field('whats_included_in_this_tour'); ?>
                         </div>
                     </div>
                     <div class="col-lg-6 mt-1 pdl">
                         <div class="bg-white" style="min-height: 140px;">
+                            <h3> Tour Excludes </h3>
                             <?php the_field('whats_not_included_in_this_tour'); ?>
                         </div>
                     </div>

@@ -10670,6 +10670,9 @@ header aside .widget_custom_html .social-wrap li a {
   list-style: none;
   padding-left: 0;
 }
+.tax-row .tour-taxonomies .tour-tax-ul li {
+  display: inline;
+}
 .tax-row .tour-taxonomies p {
   justify-content: baseline;
 }
@@ -10681,9 +10684,11 @@ header aside .widget_custom_html .social-wrap li a {
   color: #ffa200;
   font-size: 2em;
 }
-.tax-row .border-right {
-  border-right: #2d2d2d solid 2px;
+.tax-row .border-box {
   width: inherit;
+}
+.tax-row .border-box .border-right {
+  border-right: #2d2d2d solid 2px;
 }
 
 .details-row {
@@ -10698,6 +10703,11 @@ header aside .widget_custom_html .social-wrap li a {
 .details-row .tab-content-col {
   background: #aeaeae33;
   min-height: inherit;
+  padding: 1rem;
+  max-height: 600px;
+  overflow: auto;
+}
+.details-row .tab-content-col .tab-content .bg-white {
   padding: 1rem;
 }
 .details-row .tab-content-col #tour-gallery ul {
@@ -10716,6 +10726,7 @@ header aside .widget_custom_html .social-wrap li a {
   background: none;
   border: #ffa200 solid 2px;
   border-radius: 4px;
+  width: 100%;
 }
 .details-row .pdr {
   padding-right: 2px;
@@ -10751,6 +10762,25 @@ header aside .widget_custom_html .social-wrap li a {
   width: 25px;
 }
 
+@media only screen and (max-width: 768px) {
+  .tax-row .border-box {
+    border: #2d2d2d 2px solid;
+  }
+  .tax-row .border-box .border-right {
+    border-right: none !important;
+  }
+
+  .details-row .tabs-col {
+    min-height: auto;
+  }
+  .details-row .tab-titles {
+    padding-left: 0px;
+  }
+  .details-row .tab-titles button {
+    width: auto;
+    margin-right: 0.25rem;
+  }
+}
 .content {
   background: #aeaeae33;
   min-height: 1000px;

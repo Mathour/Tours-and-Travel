@@ -3161,7 +3161,7 @@ __webpack_require__.r(__webpack_exports__);
   } // Render maps on page load.
 
 
-  $(document).ready(function () {
+  (function ($) {
     $('.acf-map').each(function () {
       var map = initMap($(this));
     });
@@ -3171,6 +3171,16 @@ __webpack_require__.r(__webpack_exports__);
 (function ($) {
   $('#menu-button').on("click", function () {
     $('#social-icons').toggleClass("toggel");
+  });
+})(jQuery);
+
+(function ($) {
+  $(window).on('load resize', function () {
+    if ($(window).width() >= 767) {
+      $(".details-row>.nav").css("display", "block");
+    } else {
+      $(".nav").css("display", "flex");
+    }
   });
 })(jQuery);
 

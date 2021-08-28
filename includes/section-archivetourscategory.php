@@ -22,7 +22,16 @@ $query = tour_category_query($slug); ?>
                         <a href="<?php the_permalink(); ?>">
                             <h5 class=" card-title"><?php the_title(); ?></h5>
                         </a>
-                        <p class="card-text"><?php the_field('overview'); ?></p>
+                        <p class="card-text">
+                            <?php
+                            $ov = get_field('overview');
+                            if (strlen($ov) > 150) {
+                                $short_desc = substr($ov, 0, 149);
+                                echo $short_desc . "...";
+                            } else {
+                                echo $ov;
+                            } ?>
+                        </p>
                         <hr>
                         <div class="d-flex bd-highlight">
                             <?php $itinaryCount = get_itinary_count("itinerary");
@@ -54,8 +63,3 @@ $query = tour_category_query($slug); ?>
     <?php endwhile;
     endif; ?>
 </div>
-<?php if (($query->post_count) > 3) : ?>
-    <div class="d-grid gap-2 mt-3">
-        <a class="btn btn-primary btn-sm" href="<?php echo get_home_url(null, "/tour-categories/" . $category->slug); ?>" role="button"> Load More.. </a>
-    </div>
-<?php endif; ?>

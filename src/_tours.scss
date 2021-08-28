@@ -14,6 +14,9 @@
         .tour-tax-ul {
             list-style: none;
             padding-left: 0;
+            li {
+                display: inline;
+            }
         }
         p {
             justify-content: baseline;
@@ -27,9 +30,11 @@
             font-size: 2em;
         }
     }
-    .border-right {
-        border-right: $secondary solid 2px;
+    .border-box {
         width: inherit;
+        .border-right {
+            border-right: $secondary solid 2px;
+        }
     }
 }
 
@@ -45,11 +50,18 @@
         background: $bg_off_white;
         min-height: inherit;
         padding: 1rem;
+        max-height: 600px;
+        overflow: auto;
+        .tab-content{
+            .bg-white{
+                padding: 1rem;
+            }
+        }
         #tour-gallery {
             ul {
                 list-style: none;
                 display: flex;
-                li{
+                li {
                     margin: 1rem;
                 }
             }
@@ -63,6 +75,7 @@
             background: none;
             border: $primary solid 2px;
             border-radius: 4px;
+            width: 100%;
         }
     }
     .pdr {
@@ -86,16 +99,39 @@
     }
 }
 
-.tour-inquiry{
+.tour-inquiry {
     padding: 1rem;
     background: $bg_off_white;
-    h5{
+    h5 {
         text-align: center;
         color: $primary;
     }
 }
 
-.card-icon{
+.card-icon {
     height: 25px;
     width: 25px;
+}
+
+@media only screen and (max-width: 768px) {
+    .tax-row {
+        .border-box {
+            border: $secondary 2px solid;
+            .border-right {
+                border-right: none !important;
+            }
+        }
+    }
+    .details-row {
+        .tabs-col {
+            min-height: auto;
+        }
+        .tab-titles {
+            padding-left: 0px;
+            button {
+                width: auto;
+                margin-right: 0.25rem;
+            }
+        }
+    }
 }
