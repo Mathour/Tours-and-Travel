@@ -23,7 +23,16 @@ $query = tour_destination_query($slug);
                         <a href="<?php the_permalink(); ?>">
                             <h5 class=" card-title"><?php the_title(); ?></h5>
                         </a>
-                        <p class="card-text"><?php the_field('overview'); ?></p>
+                        <p class="card-text">
+                            <?php
+                            $ov = get_field('overview');
+                            if (strlen($ov) > 150) {
+                                $short_desc = substr($ov, 0, 149);
+                                echo $short_desc . "...";
+                            } else {
+                                echo $ov;
+                            } ?>
+                        </p>
                         <hr>
                         <div class="d-flex bd-highlight">
                             <?php $itinaryCount = get_itinary_count("itinerary");

@@ -54,7 +54,8 @@
             }
             .card-img,
             .card-img-top {
-                max-height: 360px;
+                min-height: 360px;
+                object-fit: cover;
             }
         }
         .bg-offwhite {
@@ -163,17 +164,17 @@
         border: $primary solid 2px;
         #blog-card-body {
             border-left: $primary solid 2px;
-            .card-body{
+            .card-body {
                 background: $bg_off_white;
-                .title-link{
+                .title-link {
                     width: 100%;
-                    h5{
+                    h5 {
                         border: $primary solid 2px;
                         color: $secondary;
                         text-transform: uppercase;
                         padding: 1rem;
                     }
-                    h5:hover{
+                    h5:hover {
                         color: $other;
                     }
                 }

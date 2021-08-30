@@ -2,6 +2,7 @@
 <html>
 
 <head>
+    <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
     <title>Hunza Discovery Tours</title>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBR3ou6f5A3xNlD_n0No12wi5XLtbHxNFQ"></script>
 </head>
