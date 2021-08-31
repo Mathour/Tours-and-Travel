@@ -13,8 +13,8 @@ if ($query->have_posts()) : ?>
             <?php while ($query->have_posts()) : $query->the_post(); ?>
                 <div class="col-sm-12 col-md-6">
                     <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-6">
+                        <div id="blog-featured-card" class="row g-0">
+                            <div id="card-text" class="col-xm-12 col-sm-6">
                                 <div class="card-body">
                                     <a href="<?php the_permalink(); ?>">
                                         <h5 class="card-title">
@@ -29,7 +29,7 @@ if ($query->have_posts()) : ?>
                                     <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                                 </div>
                             </div>
-                            <div class="col-6">
+                            <div id="card-picture" class="col-xm-12 col-sm-6">
                                 <img src="<?php echo get_the_post_thumbnail_url(); ?>" class="card-img-top" alt="post thumbnail">
                             </div>
                         </div>

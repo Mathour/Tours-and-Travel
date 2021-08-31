@@ -40,6 +40,14 @@
         }
         .fp-blogs {
             padding: 2rem 1rem 2rem 1rem;
+            #blog-featured-card{
+                #card-text{
+                    order: 1;
+                }
+                #card-picture{
+                    order: 2;
+                }
+            }
             .card-body {
                 background: $bg_white;
                 a {
@@ -131,6 +139,10 @@
             }
         }
     }
+}
+
+.banner.toggel{
+    margin-top: -20rem;
 }
 
 .tour-search-bar {
@@ -255,4 +267,15 @@
             }
         }
     }
+
+    .fp-blogs {
+            #blog-featured-card{
+                #card-text{
+                    order: 2 !important;
+                }
+                #card-picture{
+                    order: 1 !important;
+                }
+            }
+        }
 }

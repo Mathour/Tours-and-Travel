@@ -129,12 +129,13 @@ import { Tooltip, Toast, Popover } from 'bootstrap';
 (function ($) {
     $('#menu-button').on("click", function () {
         $('#social-icons').toggleClass("toggel");
+        $('.banner').toggleClass('toggel');
     });
 })(jQuery);
 
 (function ($) {
     $(window).on('load resize', function () {
-        if ($(window).width() >= 767) {
+        if ($(window).width() >= 768) {
             $(".details-row>.nav").css("display", "block");
         }
         else {

@@ -51,7 +51,7 @@ if (!empty($parent_categories)) :
 										<div class="d-flex bd-highlight">
 											<?php $itinaryCount = get_itinary_count("itinerary"); ?>
 											<div class="me-auto p-2 bd-highlight">
-												<img class="card-icon" src="<?php echo site_url("/wp-content/themes/Hunza Discovery/images/icons/24-hours.svg", 'http'); ?>">
+												<img class="card-icon" src="<?php echo site_url("/wp-content/themes/Hunza-Discovery/images/icons/24-hours.svg", 'http'); ?>">
 												<!-- <i class="bi bi-calendar3-range"></i> -->
 												<?php echo $itinaryCount;
 												if ($itinaryCount > 1) : ?>
@@ -61,13 +61,13 @@ if (!empty($parent_categories)) :
 												<?php endif; ?>
 											</div>
 											<div class="p-2 bd-highlight">
-												<img class="card-icon" src="<?php echo site_url("/wp-content/themes/Hunza Discovery/images/icons/boat.svg", 'http'); ?>">
+												<img class="card-icon" src="<?php echo site_url("/wp-content/themes/Hunza-Discovery/images/icons/boat.svg", 'http'); ?>">
 											</div>
 											<div class="p-2 bd-highlight">
-												<img class="card-icon" src="<?php echo site_url("/wp-content/themes/Hunza Discovery/images/icons/camping.svg", 'http'); ?>">
+												<img class="card-icon" src="<?php echo site_url("/wp-content/themes/Hunza-Discovery/images/icons/camping.svg", 'http'); ?>">
 											</div>
 											<div class="p-2 bd-highlight">
-												<img class="card-icon" src="<?php echo site_url("/wp-content/themes/Hunza Discovery/images/icons/hiking.svg", 'http'); ?>">
+												<img class="card-icon" src="<?php echo site_url("/wp-content/themes/Hunza-Discovery/images/icons/hiking.svg", 'http'); ?>">
 											</div>
 										</div>
 									</div>
