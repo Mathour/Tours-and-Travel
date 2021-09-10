@@ -13,12 +13,12 @@ function hd_scripts()
 }
 add_action('wp_enqueue_scripts', 'hd_scripts');
 
-function my_acf_init()
+function my_acf_google_map_api($api)
 {
-	acf_update_setting('google_api_key', 'AIzaSyBR3ou6f5A3xNlD_n0No12wi5XLtbHxNFQ');
+	$api['key'] = 'AIzaSyBR3ou6f5A3xNlD_n0No12wi5XLtbHxNFQ';
+	return $api;
 }
-
-add_action('acf/init', 'my_acf_init');
+add_filter('acf/fields/google_map/api', 'my_acf_google_map_api');
 
 //Theme Options
 add_theme_support('menus');

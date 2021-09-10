@@ -129,15 +129,15 @@
                         $i_lable = get_sub_field('label');
                         $i_title = get_sub_field('title');
                         $i_description = get_sub_field('description'); ?>
-                        <div class="row">
+                        <div class="row mb-2">
                             <div class="col-xm-12 col-sm-4 col-md-3 mb-1 pdr">
                                 <div class="bg-white">
-                                    <h3> <?php echo $i_lable; ?> </h3>
+                                    <h4> <?php echo $i_lable; ?> </h4>
                                 </div>
                             </div>
                             <div class="col-xm-12 col-sm-8 col-md-9 mb-1 pdl">
                                 <div class="bg-white">
-                                    <h3> <?php echo $i_title; ?> </h3>
+                                    <h4> <?php echo $i_title; ?> </h4>
                                 </div>
                             </div>
                             <div class="col-12">
@@ -166,16 +166,17 @@
                     <?php
                     $images = get_field('tour_gallery');
                     if ($images) : ?>
-                        <ul>
+                        <div class="d-flex flex-wrap">
                             <?php foreach ($images as $image) : ?>
-                                <li>
+                                <div class="p-2">
                                     <a href="<?php echo esc_url($image['url']); ?>">
                                         <img src="<?php echo esc_url($image['sizes']['thumbnail']); ?>" alt="<?php echo esc_attr($image['alt']); ?>" />
                                     </a>
                                     <p><?php echo esc_html($image['caption']); ?></p>
-                                </li>
+                                </div>
                             <?php endforeach; ?>
-                        </ul>
+                        </div>
+
                     <?php endif; ?>
                 </div>
             </div>

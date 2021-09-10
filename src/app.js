@@ -118,7 +118,7 @@ import { Tooltip, Toast, Popover } from 'bootstrap';
     }
 
     // Render maps on page load.
-    (function ($) {
+    $(document).ready(function () {
         $('.acf-map').each(function () {
             var map = initMap($(this));
         });
